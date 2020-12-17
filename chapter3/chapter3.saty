@@ -1,0 +1,16 @@
+@require: stdjareport
+
+let-inline \new-word it =
+{\dfn{#it;}}
+
+in
+document(|
+	title={Chapter.3 コマンド定義};
+	author={mokeshi3};
+|) '<
+	+chapter{はじめてのコマンド定義}<
+		+p{
+			\SATySFi;ではじめての\new-word{コマンド定義}です。
+		}
+	>
+>

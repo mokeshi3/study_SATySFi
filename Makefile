@@ -1,10 +1,7 @@
 OUTPUT_DIR = "./pdf"
 target: $(SATY)
-	satysfi -o $(OUTPUT_DIR)/$(basename $(SATY)).pdf $(SATY)
-
-clean:
-	rm *-aux
+	satysfi -o $(OUTPUT_DIR)/$(notdir $(basename $(SATY))).pdf $(SATY)
+	rm $(dir $(SATY))/*-aux
 
 clean-all:
-	rm *-aux
 	rm $(OUTPUT_DIR)/*.pdf
