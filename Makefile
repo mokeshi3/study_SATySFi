@@ -1,6 +1,6 @@
 OUTPUT_DIR = "./pdf"
 target: $(SATY)
-	satysfi -o $(OUTPUT_DIR)/$(basename SATY).pdf $(SATY)
+	satysfi -o $(OUTPUT_DIR)/$(basename $(SATY)).pdf $(SATY)
 
 clean:
 	rm *-aux
